@@ -4,12 +4,11 @@ public class Laborator5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int optiune;
-        System.out.println("1. Porneste monitorizarea sistemului (SystemMonitor)");
-        System.out.println("2. Executa varianta2 (adaugare in Startup + restart)");
+        System.out.println("1. Porneste monitorizarea sistemului (Maxim)");
+        System.out.println("2. Adauga aplicatie in Startup + restart sistem (Ana)");
         System.out.print("Alege optiunea: ");
 
         optiune = scanner.nextInt();
-
         switch (optiune) {
             case 1:
                 SystemMonitor.startMonitoring();
@@ -17,7 +16,6 @@ public class Laborator5 {
                 try { System.in.read(); } catch (Exception e) {}
                 SystemMonitor.stopMonitoring();
                 break;
-
             case 2:
                 Varianta2.executa();
                 break;
@@ -25,7 +23,6 @@ public class Laborator5 {
             default:
                 System.out.println("Optiune invalida!");
         }
-
         scanner.close();
     }
 }
